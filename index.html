@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Task Manager App</title>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-content">
+            <div id="modal-header">
+                <h3>Create your new task</h3>
+                <span class="close button-49">&times;</span>
+            </div>
+            <label for="task-name">Task Name:</label>
+            <input type="text" id="task-name" placeholder="Task name...">
+            <label for="task-desc">Task Description:</label>
+            <textarea id="task-description" rows="5" cols="10" placeholder="Task description..."></textarea>
+            <button type="button" id="add-task" class="button-32">Create Task</button>
+        </div>
+    </div>
+    <section id="hero">
+        <header id="heading-section">
+            <div id="heading">Task Manager App</div>
+            <div id="create-task">Add new task +</div> 
+        </header>
+        <main id="main-content">
+           <div id="open">
+                <div id="card-header">OPEN</div>
+                <div id="card-contents" class="append-task"></div>
+           </div>
+           <div id="in-progress">
+            <div id="card-header">IN PROGRESS</div>
+                <div id="card-contents" class="open" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+           </div>
+           <div id="in-review">
+                <div id="card-header">IN REVIEW</div>
+                <div id="card-contents" class="in-progress" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+           </div>
+            <div id="done">
+                <div id="card-header">DONE</div>
+                <div id="card-contents" class="in-review" ondrop="drop(event)" ondragover="allowDrop(event)">    
+            </div>
+           </div>
+        </main>
+        <footer class="foot">
+            <p>2023 Built By Sarvesh Belwalkar</p>
+        </footer>
+    </section>
 
+    <script src="App.js"></script>
+</body>
+</html>
